@@ -19,6 +19,7 @@ function convertPokemonToLi(pokemon) {   //função que faz retornar nesse padr�
 
 const pokemonList = document.getElementById('pokemonList')
 
-pokeApi.getPokemons().then((pokemons = []) => { 
-    pokemonList.innerHTML +=pokemons.map( convertPokemonToLi).join("")
+pokeApi.getPokemons().then((pokemons = []) => {
+    const newHtml = pokemons.map(convertPokemonToLi).join("")
+    pokemonList.innerHTML = newHtml
 })
